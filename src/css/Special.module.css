@@ -1,0 +1,47 @@
+.special {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  margin-bottom: 50px;
+}
+.special__box {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 28px 315px 28px 24px;
+  background-image: url("");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.special__title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 800;
+}
+.special__text {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.special__pricebox {
+  display: flex;
+}
+.special__price {
+  display: block;
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 21.5px;
+  color: #7AC751;
+}
+.special__throuh {
+  display: block;
+  text-decoration: line-through;
+  color: #CCCCCC;
+}/*# sourceMappingURL=Special.module.css.map */

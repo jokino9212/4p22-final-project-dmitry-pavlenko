@@ -1,0 +1,169 @@
+.outter
+    margin: 0 auto
+    max-width: 1920px
+.inner
+    margin: 0 auto
+    max-width: calc(1770 / 1920 * 100vw)
+.header
+    margin-bottom: 50px
+    &__outter
+        padding: 0 0px
+
+    &__inner
+
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 15px calc(75 / 1920 * 100vw)
+        background-color: #7AC751
+    &__top-welcome
+    &__top-welcome-text
+        font-size: 16px
+        line-height: 18.96px
+    &__signup
+        font-size: 16px
+        line-height: 18.96px
+        &:hover
+
+    &__signup-link
+        &:hover
+            color: white
+
+    &__bottom
+        margin-bottom: 25px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-top: 20px
+    &__logo
+    &__logo-icon
+    &__search-box
+        // transform: translate(-50%, 50%)
+        background: #7AC751
+        height: 60px
+        border-radius: 40px
+        padding: 10px
+        &:hover > .header__search-txt
+            width: 600px
+            padding: 0 6px
+        &:hover > .header__search-btn
+            background: green
+    &__search-txt
+        border: none
+        background: none
+        outline: none
+        float: left
+        padding: 0
+        color: white
+        font-size: 16px
+        transition: 0.4s
+        line-height: 45px
+        width: 0
+        transition: 0.4s
+    &__search-btn
+        color: black
+        float: right
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        background: #7AC751
+        display: flex
+        justify-content: center
+        align-items: center
+        text-decoration: none
+    &__cart
+        cursor: pointer
+        &:hover
+            box-shadow: 0px 0px 20px#7AC751
+            border: green
+    &__cart-icon
+    &__navbar
+        display: flex
+        justify-content: center
+        align-items: center
+        column-gap: 20px
+
+    &__navbar-item
+        font-size: 24px
+        line-height: 30px
+        font-weight: 600
+        &:hover
+            color: #4FD81F
+            // box-shadow: inset 4px 3px 10px #4FD81F
+            box-shadow: 0px 0px 30px #4FD81F
+
+.content
+    margin: 0 auto
+    max-width: calc(1770 / 1920 * 100vw)
+
+.footer
+    margin-bottom: 90px
+    &__top
+        margin-bottom: 50px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__top-col-1
+        display: flex
+        flex-direction: column
+        flex: 0 1 20%
+    &__logo
+        margin-bottom: 15px
+        transform: translateY(-10px)
+    &__logo-icon
+    &__description
+        margin-bottom: 23px
+
+    &__social
+
+    &__social-list
+        display: flex
+
+    &__social-item:not(:last-child)
+        margin-right: 17px
+
+    &__social-link
+    &__social-icon
+        &:hover
+            box-shadow: 0px 0px 30px #4FD81F
+        &--vk
+            &:hover path
+                fill:#1E13A4
+                box-shadow: 0px 0px 30px #4FD81F
+        &--od
+            &:hover path
+                fill:#FF9900    
+        &--pinterest
+            &:hover path
+                // stroke: #F5111E 
+                fill: #F5111E 
+                          
+    &__nav-item
+        font-weight: 400
+        font-size: 18px
+        &:hover
+            box-shadow: 0px 0px 30px #4FD81F
+
+        &--title
+            font-weight: 600
+
+        &:not(:last-child)
+            margin-bottom: 15px
+
+    &__bottom
+        display: flex
+
+        padding: 0 calc(75 / 1920 * 100vw)
+        padding-top: 30px
+        justify-content: space-between
+        border-top: 1px solid #969696
+
+    &__terms
+        display: flex
+
+    &__terms-list
+        display: flex
+
+    &__terms-item:not(:last-child)
+        margin-right: 10px

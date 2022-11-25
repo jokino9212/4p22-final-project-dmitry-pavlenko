@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: #777;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 20px;
+}/*# sourceMappingURL=Page404.module.css.map */
