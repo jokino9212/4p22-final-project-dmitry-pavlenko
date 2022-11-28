@@ -98,7 +98,7 @@
 }
 .header__navbar-item:hover {
   color: #4FD81F;
-  box-shadow: 0px 0px 30px #4FD81F;
+  text-shadow: 0px 0px 30px #4FD81F;
 }
 
 .content {
@@ -133,12 +133,8 @@
 .footer__social-item:not(:last-child) {
   margin-right: 17px;
 }
-.footer__social-icon:hover {
-  box-shadow: 0px 0px 30px #4FD81F;
-}
 .footer__social-icon--vk:hover path {
   fill: #1E13A4;
-  box-shadow: 0px 0px 30px #4FD81F;
 }
 .footer__social-icon--od:hover path {
   fill: #FF9900;
@@ -151,7 +147,7 @@
   font-size: 18px;
 }
 .footer__nav-item:hover {
-  box-shadow: 0px 0px 30px #4FD81F;
+  text-shadow: 0px 0px 30px #4FD81F;
 }
 .footer__nav-item--title {
   font-weight: 600;

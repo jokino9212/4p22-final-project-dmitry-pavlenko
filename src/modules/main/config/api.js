@@ -9,7 +9,18 @@ const fetchProducts = async () => {
         console.log(e)
     }
 }
-const api = { fetchProducts }
+const fetchProduct = async (productId) => {
+    try {
+        const response = await axios.get(`https://api.escuelajs.co/api/v1/products/${productId}`)
+        // const response = await axios.get('https://fakestoreapi.com/products')
+        return response.data
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+
+const api = { fetchProducts, fetchProduct }
 
 export default api
 

@@ -77,19 +77,16 @@ const MainLayout = (props) => {
                                         <li className='footer__social-item footer__social-item--vk'>
                                             <a href="#" className="footer__social-link">
                                                 <VkIcon className='footer__social-icon footer__social-icon--vk' />
-                                                {/* <span className="footer__social-icon footer__social-icon--vk"></span> */}
                                             </a>
                                         </li>
                                         <li className='footer__social-item footer__social-item--od'>
                                             <a href="#" className="footer__social-link">
                                                 <OdIcon className='footer__social-icon footer__social-icon--od' />
-                                                {/* <span className="footer__social-icon footer__social-icon--od"></span> */}
                                             </a>
                                         </li>
                                         <li className='footer__social-item footer__social-item--pinterest'>
                                             <a href="#" className="footer__social-link">
                                                 <PinterestIcon className='footer__social-icon footer__social-icon--pinterest' />
-                                                {/* <span className="footer__social-icon footer__social-icon--pinterest"></span> */}
                                             </a>
                                         </li>
                                     </ul>

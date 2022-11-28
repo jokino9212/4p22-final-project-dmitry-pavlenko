@@ -34,6 +34,11 @@
   line-height: 18px;
 }
 
+.purchase {
+  display: flex;
+  flex-direction: row;
+}
+
 .price {
   font-size: 18px;
   line-height: 22px;
@@ -42,4 +47,11 @@
 }
 .price::after {
   content: " $";
+}
+
+.icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 0;
 }/*# sourceMappingURL=ProductItem.module.css.map */

@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.search {
+  margin-bottom: 20px;
+}
+
 .wrapper {
   margin-bottom: 50px;
   display: flex;
@@ -36,5 +40,5 @@
 }
 .navLink:hover {
   color: #7AC751;
-  box-shadow: 0px 0px 30px #4FD81F;
+  text-shadow: 0px 0px 30px #4FD81F;
 }/*# sourceMappingURL=Main.module.css.map */
