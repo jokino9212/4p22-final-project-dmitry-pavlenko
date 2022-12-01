@@ -45,16 +45,11 @@
 .description {
   margin-bottom: 25px;
   max-height: 90px;
-  overflow: hidden;
   max-width: 450px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
-.description::after {
-  content: "A classic rectangular desk does not take up much space and is suitable for a small room or office.It is equipped with two spacious drawers, above which there is an open niche for storing paper and other accessories.The main advantage of the product is a large work surface, where it is convenient to spread out papers, put a laptop or monitor and work comfortably.The Lyon table is made of high-quality chipboard.This material is characterized by durability and strength, so the piece of furniture will retain its functionality and attractiveness for many years.";
-}
-
 .priceBox {
   display: flex;
   flex-direction: row;

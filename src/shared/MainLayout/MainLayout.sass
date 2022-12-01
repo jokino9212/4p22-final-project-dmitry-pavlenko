@@ -21,7 +21,11 @@
     &__top-welcome-text
         font-size: 16px
         line-height: 18.96px
+    &__social
+        margin-right: 70px
     &__signup
+        
+        display: flex
         font-size: 16px
         line-height: 18.96px
         &:hover
@@ -39,11 +43,17 @@
     &__logo
     &__logo-icon
     &__search-box
-        // transform: translate(-50%, 50%)
+        margin-right: 150px
+        display: flex
+        position: relative
+        transition: 0.4s
         background: #7AC751
+        width: 250px    
         height: 60px
         border-radius: 40px
         padding: 10px
+        &:hover
+            width: 600px
         &:hover > .header__search-txt
             width: 600px
             padding: 0 6px
@@ -54,16 +64,16 @@
         background: none
         outline: none
         float: left
-        padding: 0
+        padding: 10px
         color: white
         font-size: 16px
-        transition: 0.4s
         line-height: 45px
-        width: 0
+        width: 200px
         transition: 0.4s
     &__search-btn
         color: black
-        float: right
+        position: absolute
+        right: 10px
         width: 40px
         height: 40px
         border-radius: 50%
@@ -90,7 +100,7 @@
         font-weight: 600
         &:hover
             color: #4FD81F
-            // box-shadow: inset 4px 3px 10px #4FD81F
+            
             text-shadow: 0px 0px 30px #4FD81F
 
 .content
@@ -115,28 +125,7 @@
     &__description
         margin-bottom: 23px
 
-    &__social
-
-    &__social-list
-        display: flex
-
-    &__social-item:not(:last-child)
-        margin-right: 17px
-
-    &__social-link
-    &__social-icon
-        &:hover
-        &--vk
-            &:hover path
-                fill:#1E13A4
-                F
-        &--od
-            &:hover path
-                fill:#FF9900    
-        &--pinterest
-            &:hover path
-                // stroke: #F5111E 
-                fill: #F5111E 
+    
                           
     &__nav-item
         font-weight: 400
@@ -166,3 +155,7 @@
 
     &__terms-item:not(:last-child)
         margin-right: 10px
+    &__terms-link
+        &:hover
+            text-shadow: 0px 0px 20px#7AC751
+            

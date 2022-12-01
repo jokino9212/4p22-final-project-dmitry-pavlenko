@@ -25,7 +25,11 @@
   font-size: 16px;
   line-height: 18.96px;
 }
+.header__social {
+  margin-right: 70px;
+}
 .header__signup {
+  display: flex;
   font-size: 16px;
   line-height: 18.96px;
 }
@@ -40,10 +44,18 @@
   padding-top: 20px;
 }
 .header__search-box {
+  margin-right: 150px;
+  display: flex;
+  position: relative;
+  transition: 0.4s;
   background: #7AC751;
+  width: 250px;
   height: 60px;
   border-radius: 40px;
   padding: 10px;
+}
+.header__search-box:hover {
+  width: 600px;
 }
 .header__search-box:hover > .header__search-txt {
   width: 600px;
@@ -57,17 +69,17 @@
   background: none;
   outline: none;
   float: left;
-  padding: 0;
+  padding: 10px;
   color: white;
   font-size: 16px;
-  transition: 0.4s;
   line-height: 45px;
-  width: 0;
+  width: 200px;
   transition: 0.4s;
 }
 .header__search-btn {
   color: black;
-  float: right;
+  position: absolute;
+  right: 10px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -127,21 +139,6 @@
 .footer__description {
   margin-bottom: 23px;
 }
-.footer__social-list {
-  display: flex;
-}
-.footer__social-item:not(:last-child) {
-  margin-right: 17px;
-}
-.footer__social-icon--vk:hover path {
-  fill: #1E13A4;
-}
-.footer__social-icon--od:hover path {
-  fill: #FF9900;
-}
-.footer__social-icon--pinterest:hover path {
-  fill: #F5111E;
-}
 .footer__nav-item {
   font-weight: 400;
   font-size: 18px;
@@ -170,4 +167,7 @@
 }
 .footer__terms-item:not(:last-child) {
   margin-right: 10px;
+}
+.footer__terms-link:hover {
+  text-shadow: 0px 0px 20px #7AC751;
 }/*# sourceMappingURL=MainLayout.css.map */

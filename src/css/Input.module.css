@@ -1,0 +1,35 @@
+.root {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.inputDefault {
+  width: 100%;
+  border: 1px solid #7AC751;
+  margin-bottom: 20px;
+}
+.inputDefault::-moz-placeholder {
+  padding-left: 10px;
+}
+.inputDefault:-ms-input-placeholder {
+  padding-left: 10px;
+}
+.inputDefault::placeholder {
+  padding-left: 10px;
+}
+.inputDefault:focus {
+  outline: none;
+  box-shadow: 4px 2px 2px #D2FBBC;
+}
+
+.inputError {
+  border: 2px solid red;
+}
+
+.errorMsg {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  color: red;
+  pointer-events: none;
+}/*# sourceMappingURL=Input.module.css.map */

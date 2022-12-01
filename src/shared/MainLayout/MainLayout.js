@@ -1,7 +1,8 @@
 import React from "react";
-import { ShopIcon, SearchIcon, LogoIcon, OdIcon, VkIcon, PinterestIcon } from 'assets/icons/'
-import './MainLayout.sass'
+import { ShopIcon, SearchIcon, LogoIcon } from 'assets/icons/';
+import './MainLayout.sass';
 import { useNavigate } from 'react-router-dom';
+import { Social } from './components';
 
 
 
@@ -17,13 +18,14 @@ const MainLayout = (props) => {
                             <span className="header__top-welcome-text">Добро пожаловать в наш онлайн-магазин</span>
                         </div>
                         <div className="header__signup">
+                        <div className="header__social"><Social /></div>
                             <a className="header__signup-link"
                                 onClick={() => {
                                     navigate('/registration')
                                 }
                                 }
                             >
-                                Регистрация или Вход
+                                Вход
                             </a>
                         </div>
                     </div>
@@ -33,7 +35,7 @@ const MainLayout = (props) => {
                                 <LogoIcon className="header__logo-icon logo" />
                             </div>
                             <form className="header__search-box">
-                                <input className="header__search-txt" type="text" name="" placeholder="type to search" />
+                                <input className="header__search-txt" type="text" name="" placeholder="Поиск.." />
                                 <a className="header__search-btn" href="">
                                     <SearchIcon />
                                 </a>
@@ -72,25 +74,7 @@ const MainLayout = (props) => {
                                 <span className='footer__description'>
                                     Первый мебельный онлайн-магазин. Крупный выбор мебели в вашем городе.
                                 </span>
-                                <div className='footer__social social'>
-                                    <ul className='footer__social-list'>
-                                        <li className='footer__social-item footer__social-item--vk'>
-                                            <a href="#" className="footer__social-link">
-                                                <VkIcon className='footer__social-icon footer__social-icon--vk' />
-                                            </a>
-                                        </li>
-                                        <li className='footer__social-item footer__social-item--od'>
-                                            <a href="#" className="footer__social-link">
-                                                <OdIcon className='footer__social-icon footer__social-icon--od' />
-                                            </a>
-                                        </li>
-                                        <li className='footer__social-item footer__social-item--pinterest'>
-                                            <a href="#" className="footer__social-link">
-                                                <PinterestIcon className='footer__social-icon footer__social-icon--pinterest' />
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <Social/>
                             </div>
                             <div className='footer__top-col-2'>
                                 <ul className='footer__col-2-nav-list'>
