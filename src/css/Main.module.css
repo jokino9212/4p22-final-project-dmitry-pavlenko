@@ -95,4 +95,8 @@
   -moz-column-gap: 30px;
        column-gap: 30px;
   justify-content: space-between;
+}
+
+.stack {
+  margin-bottom: 25px;
 }/*# sourceMappingURL=Main.module.css.map */

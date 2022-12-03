@@ -1,3 +1,9 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .special {
   display: flex;
   justify-content: space-between;
@@ -23,7 +29,7 @@
   width: 100%;
   flex-direction: column;
   border: 1px solid black;
-  padding: 28px 515px 28px 24px;
+  padding: 28px 275px 28px 24px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url(/assets/images/right.png);
@@ -58,4 +64,26 @@
   line-height: 21.5px;
   text-decoration: line-through;
   color: #CCCCCC;
+}
+
+.special__boxLeft {
+  padding: 28px 275px 28px 24px;
+}
+.special__boxRight {
+  display: flex;
+}
+
+.special__boxLeft {
+  padding: 28px 98px 28px 24px;
+}
+.special__boxRight {
+  display: flex;
+  padding: 28px 98px 28px 24px;
+}
+
+.special__boxLeft {
+  padding-right: 50px;
+}
+.special__boxRight {
+  display: none;
 }/*# sourceMappingURL=Special.module.css.map */

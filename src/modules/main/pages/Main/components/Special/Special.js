@@ -8,7 +8,7 @@ const Special = (props) => {
 
 
     return (
-
+        <div className={s.root}>
         <div className={s.special}>
             <div className={s.special__boxLeft}>
               
@@ -28,7 +28,7 @@ const Special = (props) => {
                 </div>
             </div>
         </div>
-
+        </div>
 
     )
 

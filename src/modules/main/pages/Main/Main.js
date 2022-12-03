@@ -7,7 +7,7 @@ import api from 'modules/main/config/api';
 import { ProductItem, Special } from './components';
 import { SearchIcon, } from 'assets/icons/';
 
-import {getPageProducts} from './Main.utils'
+import { getPageProducts } from './Main.utils'
 import s from './Main.module.sass';
 import { setIsLoading } from 'modules/main/store/slice';
 import { setProducts } from 'modules/main/store/slice';
@@ -39,12 +39,12 @@ const Main = () => {
     const [selectedTitles, setSelectedTitles] = useState('0') // Selected <select> value
     const [totalProducts, setTotalProducts] = useState([]) // Dataset for rendering
     const [page, setPage] = useState(0) // Pagination
-    const [pageSize, setPageSize] = useState(4)
+    const [pageSize, setPageSize] = useState(8)
 
     useEffect(() => {
-   console.log(page)
+        console.log(page)
     }, [page])
-    
+
 
     const searchButtonRef = useRef(null)
 
@@ -54,8 +54,8 @@ const Main = () => {
 
         api.fetchProducts().then((data) => {
             dispatch(setProducts(data))
-            setFoundProducts(getPageProducts(data, page, pageSize))
             dispatch(setIsLoading(false))
+            setFoundProducts(data)
         })
     }, [dispatch])
 
@@ -64,6 +64,9 @@ const Main = () => {
         const totalProducts = foundProducts;
         setTotalProducts(getPageProducts(totalProducts, page, pageSize))
     }, [foundProducts, page, pageSize])
+
+
+    // -----
 
     const onSearch = () => {
         if (!searchInput && (selectedTitles === PRICES[0].value || !selectedTitles)) {
@@ -188,12 +191,12 @@ const Main = () => {
                     }
                 </div>
             </div>
-            <Stack spacing={2}>
+            <Stack spacing={2} className={s.stack}>
                 <Pagination
                     page={page + 1}
-                    count={10}
+                    count={5}
                     onChange={(event, page) => {
-                        setFoundProducts(products)
+
                         setPage(page - 1)
                     }}
                     color='primary'
