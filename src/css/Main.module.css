@@ -23,11 +23,11 @@
   border-top-right-radius: 0;
 }
 .searchInput:hover {
-  box-shadow: 4px 2px 2px #D2FBBC;
+  box-shadow: 4px 4px 16px #7AC751;
 }
 .searchInput:focus {
   outline: none;
-  box-shadow: 4px 2px 2px #D2FBBC;
+  box-shadow: 4px 4px 16px #7AC751;
 }
 .searchInput::-moz-placeholder {
   padding-left: 15px;
@@ -48,6 +48,12 @@
   outline: none;
   color: #555555;
 }
+.searchSelect:hover {
+  box-shadow: 4px 4px 16px #7AC751;
+}
+.searchSelect:focus {
+  box-shadow: 4px 4px 16px #7AC751;
+}
 
 .searchButton {
   display: inline-block;
@@ -59,6 +65,13 @@
   cursor: pointer;
   background-color: #7AC751;
 }
+.searchButton:hover {
+  box-shadow: 4px 4px 16px #7AC751;
+}
+.searchButton:focus {
+  box-shadow: 4px 4px 16px #7AC751;
+  outline: none;
+}
 
 .searchBtnReset {
   padding: 15px;
@@ -67,11 +80,11 @@
   cursor: pointer;
 }
 .searchBtnReset:hover {
-  box-shadow: 4px 2px 2px #D2FBBC;
+  box-shadow: 4px 4px 16px #7AC751;
 }
 .searchBtnReset:focus {
   outline: none;
-  box-shadow: 4px 2px 2px #D2FBBC;
+  box-shadow: 4px 4px 16px #7AC751;
 }
 
 .wrapper {

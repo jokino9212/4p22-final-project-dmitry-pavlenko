@@ -28,6 +28,7 @@
 .image {
   max-width: 250px;
   max-height: 250px;
+  cursor: pointer;
 }
 
 .right {
@@ -40,6 +41,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 32px;
+  cursor: pointer;
 }
 
 .description {

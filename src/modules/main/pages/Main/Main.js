@@ -1,111 +1,107 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { Pagination, Stack } from '@mui/material'
 
 import { MainLayout } from 'shared';
 import api from 'modules/main/config/api';
 import { ProductItem, Special } from './components';
 import { SearchIcon, } from 'assets/icons/';
 
-
+import {getPageProducts} from './Main.utils'
 import s from './Main.module.sass';
+import { setIsLoading } from 'modules/main/store/slice';
+import { setProducts } from 'modules/main/store/slice';
 
 const PRICES = [
     {
         label: 'Цена: от: /до:',
-        value: 0
+        value: '0'
     },
     {
         label: 'От 0 до 200',
-        value: 1
+        value: '1'
     },
     {
         label: 'От 201 до 500',
-        value: 2
+        value: '2'
     },
     {
         label: 'От 501 и выше',
-        value: 3
+        value: '3'
     },
 ]
 const Main = () => {
-    const [products, setProducts] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
+    const { isLoading, products } = useSelector((state) => state.mainReducer)
+    const dispatch = useDispatch()
 
-    const [searchInput, setSearchInput] = useState('')
-    const [foundProducts, setFoundProducts] = useState([])
+    const [searchInput, setSearchInput] = useState('') // Title Filtering
+    const [foundProducts, setFoundProducts] = useState([]) // Filtered dataset
+    const [selectedTitles, setSelectedTitles] = useState('0') // Selected <select> value
+    const [totalProducts, setTotalProducts] = useState([]) // Dataset for rendering
+    const [page, setPage] = useState(0) // Pagination
+    const [pageSize, setPageSize] = useState(4)
 
-    const [titles, setTitles] = useState([])
-    const [selectedTitles, setSelectedTitles] = useState('')
-    // const [filteredProducts, setFilteredProducts] = useState([])
-
-    const [totalProducts, setTotalProducts] = useState([])
-    // const [isDirty, setIsDirty] = useState(false)
+    useEffect(() => {
+   console.log(page)
+    }, [page])
+    
 
     const searchButtonRef = useRef(null)
 
+    // Initial loading
     useEffect(() => {
+        dispatch(setIsLoading(true))
 
-        console.log(selectedTitles)
-
-    }, [selectedTitles])
-
-
-
-    useEffect(() => {
-        setIsLoading(true)
         api.fetchProducts().then((data) => {
-            setProducts(data)
-            setTotalProducts(data)
-            setIsLoading(false)
-            // setTitles(['Цена: от: /до:', 'От 0 до 200', 'От 201 до 500', 'От 501 и выше'])
+            dispatch(setProducts(data))
+            setFoundProducts(getPageProducts(data, page, pageSize))
+            dispatch(setIsLoading(false))
         })
-    }, [])
+    }, [dispatch])
 
-
-
+    // Set final dataset
+    useEffect(() => {
+        const totalProducts = foundProducts;
+        setTotalProducts(getPageProducts(totalProducts, page, pageSize))
+    }, [foundProducts, page, pageSize])
 
     const onSearch = () => {
-        if (!searchInput && (selectedTitles === PRICES[0].label || !selectedTitles)) {
+        if (!searchInput && (selectedTitles === PRICES[0].value || !selectedTitles)) {
             setFoundProducts(products);
         } else {
-
-            if (searchInput && (selectedTitles === PRICES[0].label || !selectedTitles)) {
-                console.log('1')
+            if (searchInput && (selectedTitles === PRICES[0].value || !selectedTitles)) {
                 setFoundProducts(
                     products.filter((product) =>
                         product.title.toLowerCase().includes(searchInput.toLowerCase().trim())
                     )
                 )
-            } else if (!searchInput && selectedTitles !== PRICES[0].label) {
+            } else if (!searchInput && selectedTitles !== PRICES[0].value) {
 
-                console.log('branch 1')
                 // ---
-                if (selectedTitles === PRICES[1].label) {
-                    console.log('branch 2')
+                if (selectedTitles === PRICES[1].value) {
                     setFoundProducts(products.filter((product) =>
                         product.price < 201))
                 }
-                if (selectedTitles === PRICES[2].label) {
+                if (selectedTitles === PRICES[2].value) {
                     setFoundProducts(products.filter((product) =>
                         product.price > 201 && product.price < 501))
                 }
-                if (selectedTitles === PRICES[3].label) {
+                if (selectedTitles === PRICES[3].value) {
                     setFoundProducts(products.filter((product) =>
                         product.price > 500))
                 }
                 // ---
-
-            } else if (searchInput && selectedTitles !== PRICES[0].label) {
-
+            } else if (searchInput && selectedTitles !== PRICES[0].value) {
                 // ---
-                if (selectedTitles === PRICES[1].label) {
+                if (selectedTitles === PRICES[1].value) {
                     setFoundProducts(products.filter((product) =>
                         product.price < 201 && product.title.toLowerCase().includes(searchInput.toLowerCase().trim())))
                 }
-                if (selectedTitles === PRICES[2].label) {
+                if (selectedTitles === PRICES[2].value) {
                     setFoundProducts(products.filter((product) =>
                         product.price > 201 && product.price < 501 && product.title.toLowerCase().includes(searchInput.toLowerCase().trim())))
                 }
-                if (selectedTitles === PRICES[3].label) {
+                if (selectedTitles === PRICES[3].value) {
                     setFoundProducts(products.filter((product) =>
                         product.price > 500 && product.title.toLowerCase().includes(searchInput.toLowerCase().trim())))
                 }
@@ -114,13 +110,7 @@ const Main = () => {
         }
     }
 
-    useEffect(() => {
-        console.log('found', foundProducts)
-        const totalProducts = foundProducts;
-        console.log(totalProducts)
-        setTotalProducts(totalProducts)
-    }, [foundProducts])
-
+    //Component render
     return (
         <MainLayout>
             <div className={s.root}>
@@ -134,10 +124,11 @@ const Main = () => {
                             type='text'
                             placeholder='Поиск..'
                             value={searchInput}
+
                             onChange={(event) => {
                                 setSearchInput(event.target.value)
-
                             }}
+
                             onKeyDown={(event) => {
                                 if (event.key === 'Enter') {
                                     searchButtonRef.current.click()
@@ -149,19 +140,15 @@ const Main = () => {
                         <select className={s.searchSelect}
                             name='select'
                             value={selectedTitles}
+
                             onChange={(event) => {
                                 setSelectedTitles(event.target.value)
-
                             }}
                         >
+
                             {PRICES.map((category) => (
                                 <option value={category.value} key={category.value}>{category.label}</option>
                             ))}
-                            {/* {titles.map((title, index) => (
-                                <option value={title} key={index}>
-                                    {title}
-                                </option>
-                            ))} */}
                         </select>
 
                         {/* BUTTON SEARCH */}
@@ -185,6 +172,7 @@ const Main = () => {
                     </button>
                 </div>
 
+                {/* PRODUCTS WRAPPER */}
                 <div className={s.wrapper}>
                     {!isLoading ?
                         totalProducts.map((product) => (
@@ -200,6 +188,17 @@ const Main = () => {
                     }
                 </div>
             </div>
+            <Stack spacing={2}>
+                <Pagination
+                    page={page + 1}
+                    count={10}
+                    onChange={(event, page) => {
+                        setFoundProducts(products)
+                        setPage(page - 1)
+                    }}
+                    color='primary'
+                />
+            </Stack>
         </MainLayout>
     )
 }

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useEffect } from 'react';
 import { MainLayout } from 'shared';
 
 import s from './Support.module.sass';
@@ -117,7 +116,7 @@ const Support = () => {
           {/* Radio */}
           <div className={s.radioBox}>
             {isKindInvalid && <div className={s.errorMsg}>Выберите один из вариантов</div>}
-            <div className={s.radioOfferBox}>
+            <div className={s.radioOfferBox} tabIndex='0'>
               <label className={s.radioLabel}>
                 <input
                   className={s.radioInput}
@@ -135,7 +134,7 @@ const Support = () => {
               </label>
             </div>
 
-            <div className={s.radioPretensionBox}>
+            <div className={s.radioPretensionBox} tabIndex='0'>
               <label className={s.radioLabel}>
                 <input
                   className={s.radioInput}
@@ -154,9 +153,9 @@ const Support = () => {
             </div>
           </div>
           {/* FILE */}
-          <div className={s.inputFileBox}>
+          <div className={s.inputFileBox} tabIndex='0'>
             {isFileInvalid && <div className={s.errorMsg}>Загрузите файл</div>}
-            <label for='file' className={s.inputFileLabel}>
+            <label htmlFor='file' className={s.inputFileLabel}>
               <input
                 multiple
                 accept="image/png, image/jpeg"
@@ -167,6 +166,7 @@ const Support = () => {
                 value={file}
                 onChange={(event) => {
                   setFile(event.target.value);
+                  console.log(event.target.value)
                   setIsFileInvalid(false);
                 }}
               />
@@ -176,7 +176,7 @@ const Support = () => {
             </label>
           </div>
           {/*  CHECKBOX */}
-          <div className={s.checkboxBox}>
+          <div className={s.checkboxBox}  tabIndex='0'>
             {isAgreementInvalid && (
               <div className={s.errorMsg}>Согласитесь на получение обновлений</div>
             )}
@@ -197,7 +197,7 @@ const Support = () => {
             </label>
           </div>
           {/* BUTTON SUBMIT SEND */}
-          <button className={s.checkboxButton} id='form-button' type={'submit'}>
+          <button className={s.button} id='form-button' type={'submit'} tabIndex='0'>
             Отправить
           </button>
         </form>

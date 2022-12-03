@@ -21,16 +21,33 @@
     &__top-welcome-text
         font-size: 16px
         line-height: 18.96px
+
+    &__phone
+        [href^="tel:"]
+        &:before
+            content: "\260e"
+            margin-right: 0.5em
+        &:focus
+            color: white
+        &:hover
+            color: white
     &__social
         margin-right: 70px
     &__signup
-        
+
         display: flex
         font-size: 16px
         line-height: 18.96px
         &:hover
 
     &__signup-link
+        border: none
+        padding: 0
+        background-color: transparent
+        cursor: pointer
+        &:focus
+            color: white
+            border: white
         &:hover
             color: white
 
@@ -40,54 +57,15 @@
         justify-content: space-between
         align-items: center
         padding-top: 20px
-    &__logo
-    &__logo-icon
-    &__search-box
-        margin-right: 150px
-        display: flex
-        position: relative
-        transition: 0.4s
-        background: #7AC751
-        width: 250px    
-        height: 60px
-        border-radius: 40px
-        padding: 10px
-        &:hover
-            width: 600px
-        &:hover > .header__search-txt
-            width: 600px
-            padding: 0 6px
-        &:hover > .header__search-btn
-            background: green
-    &__search-txt
-        border: none
-        background: none
-        outline: none
-        float: left
-        padding: 10px
-        color: white
-        font-size: 16px
-        line-height: 45px
-        width: 200px
-        transition: 0.4s
-    &__search-btn
-        color: black
-        position: absolute
-        right: 10px
-        width: 40px
-        height: 40px
-        border-radius: 50%
-        background: #7AC751
-        display: flex
-        justify-content: center
-        align-items: center
-        text-decoration: none
+
     &__cart
         cursor: pointer
         &:hover
             box-shadow: 0px 0px 20px#7AC751
             border: green
-    &__cart-icon
+        &:focus
+            color: black
+
     &__navbar
         display: flex
         justify-content: center
@@ -98,9 +76,14 @@
         font-size: 24px
         line-height: 30px
         font-weight: 600
+        border: none
+        padding: 0
+        background-color: transparent
+        cursor: pointer
+        color: #555555
         &:hover
             color: #4FD81F
-            
+
             text-shadow: 0px 0px 30px #4FD81F
 
 .content
@@ -121,15 +104,22 @@
     &__logo
         margin-bottom: 15px
         transform: translateY(-10px)
-    &__logo-icon
+
     &__description
         margin-bottom: 23px
 
-    
-                          
     &__nav-item
+        &:not(:last-child)
+            margin-bottom: 15px
+    &__nav-link
+        border: none
+        padding: 0
+        background-color: transparent
+        cursor: pointer
         font-weight: 400
         font-size: 18px
+        color: #555555
+
         &:hover
             text-shadow: 0px 0px 30px #4FD81F
 
@@ -137,7 +127,6 @@
             font-weight: 600
 
         &:not(:last-child)
-            margin-bottom: 15px
 
     &__bottom
         display: flex
@@ -156,6 +145,9 @@
     &__terms-item:not(:last-child)
         margin-right: 10px
     &__terms-link
+        border: none
+        padding: 0
+        background-color: transparent
+        cursor: pointer
         &:hover
             text-shadow: 0px 0px 20px#7AC751
-            

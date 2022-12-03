@@ -8,17 +8,17 @@ import {OdIcon, VkIcon, PinterestIcon } from 'assets/icons/'
     <div className='social'>
       <ul className='social__list'>
         <li className='social__item social__item--vk '>
-          <a href='#' className='social__link'>
+          <a href='/#' className='social__link'>
             <VkIcon className='social__icon social__icon--vk' />
           </a>
         </li>
         <li className='social__item social__item--od'>
-          <a href='#' className='social__link'>
+          <a href='/#' className='social__link'>
             <OdIcon className='social__icon social__icon--od' />
           </a>
         </li>
         <li className='social__item social__item--pinterest'>
-          <a href='#' className='social__link'>
+          <a href='/#' className='social__link'>
             <PinterestIcon className='social__icon social__icon--pinterest' />
           </a>
         </li>

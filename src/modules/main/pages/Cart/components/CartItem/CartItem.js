@@ -1,21 +1,31 @@
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+
+import { removeProductFromCart } from 'modules/main/store/slice'
 import s from './CartItem.module.sass'
 
 
 
-
+    
 const CartItem = (props) => {
-    const {id, title, description, images, price, cartProducts, setCartProducts } = props
+    const {id, title, description, images, price,  } = props
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+   
+    
     const onDeleteCartItem = () => {
-        setCartProducts(cartProducts.filter(product => product.id !== id))
+        dispatch(removeProductFromCart(id))
+    
     }
     return (
         <div className={s.root}>
             <div className={s.container}>
                 < div className={s.left} >
-                    <img className={s.image} src={images} alt="Картинка товара"/>
+                    <img className={s.image} src={images} alt="Картинка товара" onClick={() => navigate(`/products/${id}`)}/>
                 </div >
                 <div className={s.right}>
-                    <div className={s.title}>{title}</div>
+                    <div className={s.title} onClick={() => navigate(`/products/${id}`)}>{title}</div>
                     <div className={s.description}>{description}</div>
                     <div className={s.priceBox}>
                         <div className={s.priceAmount}>{price} $</div>

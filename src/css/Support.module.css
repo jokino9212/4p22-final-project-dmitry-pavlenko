@@ -164,7 +164,7 @@
   border: 2px solid red;
 }
 
-.checkboxButton {
+.button {
   padding: 16px 135px;
   font-size: 18px;
   font-weight: 400;
@@ -176,6 +176,9 @@
   outline: none;
   cursor: pointer;
 }
-.checkboxButton:hover {
+.button:hover {
+  box-shadow: 0px 0px 30px #4FD81F;
+}
+.button:focus {
   box-shadow: 0px 0px 30px #4FD81F;
 }/*# sourceMappingURL=Support.module.css.map */
