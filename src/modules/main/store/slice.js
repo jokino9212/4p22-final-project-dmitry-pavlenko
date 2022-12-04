@@ -6,7 +6,6 @@ const initialState = {
     cartProducts: [],
 }
 
-
 export const slice = createSlice({
     name: 'counter',
     initialState,
@@ -27,7 +26,6 @@ export const slice = createSlice({
         }
     },
 })
-
 
 export const { setProducts, setIsLoading, addProductToCart, removeProductFromCart } = slice.actions
 

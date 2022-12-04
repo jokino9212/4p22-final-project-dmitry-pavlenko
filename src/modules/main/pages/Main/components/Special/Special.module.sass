@@ -17,7 +17,7 @@
         padding: 28px 375px 28px 24px
         background-size: 100% 100%
         background-repeat: no-repeat
-        background-image: url(/assets/images/left.png)
+        background-image: url('/assets/images/left.png')
 
     &__boxRight
         display: flex
@@ -28,7 +28,8 @@
         padding: 28px 275px 28px 24px
         background-size: 100% 100%
         background-repeat: no-repeat
-        background-image: url(/assets/images/right.png)
+        background-image: url('/assets/images/right.png')
+        
     &__title
         display: block
         margin-bottom: 22px
@@ -62,28 +63,28 @@
 
     //Media 
 
-@media (max-width: 1720px)
-.special
-    &__boxLeft
-        padding: 28px 275px 28px 24px
+@media screen and (max-width: 1720px)
+    .special
+        &__boxLeft
+            padding: 28px 275px 28px 24px
 
-    &__boxRight
-        display: flex
+        &__boxRight
+            display: flex
 
-@media (max-width: 1250px)
-.special
-    &__boxLeft
-        padding: 28px 98px 28px 24px
+@media screen and (max-width: 1250px)
+    .special
+        &__boxLeft
+            padding: 28px 98px 28px 24px
 
-    &__boxRight
-        display: flex
-        padding: 28px 98px 28px 24px
+        &__boxRight
+            display: flex 
+            padding: 28px 98px 28px 24px
 
-@media (max-width: 768px)
-.special
-    &__boxLeft
-        padding-right: 50px
-    &__boxRight
-        display: none 
+@media screen and (max-width: 768px)
+    .special
+        &__boxLeft
+            padding-right: 50px
+        &__boxRight
+            display: none 
 
 

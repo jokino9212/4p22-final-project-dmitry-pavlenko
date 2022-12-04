@@ -6,20 +6,20 @@ import { validateEmail } from './support.utils';
 import { Input } from './components';
 import classNames from 'classnames';
 
+
 const Support = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [comment, setComment] = useState('');
   const [kindOfComment, setKindOfComment] = useState(false);
-
   const [agreement, setAgreement] = useState(false);
   const [file, setFile] = useState('');
+
   const [isNameInvalid, setIsNameInvalid] = useState(false);
   const [isEmailInvalid, setIsEmailInvalid] = useState(false);
   const [isCommentInvalid, setIsCommentInvalid] = useState(false);
   const [isKindInvalid, setIsKindInvalid] = useState(false);
   const [isFileInvalid, setIsFileInvalid] = useState(false);
-
   const [isAgreementInvalid, setIsAgreementInvalid] = useState(false);
 
   const onSubmit = (event) => {
@@ -73,134 +73,143 @@ const Support = () => {
   return (
     <MainLayout>
       <div className={s.root}>
-        <h1 className={s.title}>Напишите нам</h1>
-        <form className={s.form} onSubmit={onSubmit}>
-          {/* INPUT NAME */}
-          <Input
-            value={name}
-            placeholder={'Введите имя'}
-            onChange={(event) => {
-              setIsNameInvalid(false);
-              setName(event.target.value);
-            }}
-            isInvalid={isNameInvalid}
-            errorMessage={'Имя не введено'}
-          />
-          {/* INPUT EMAIL */}
-          <Input
-            value={email}
-            placeholder={'Введите email'}
-            onChange={(event) => {
-              setIsEmailInvalid(false);
-              setEmail(event.target.value);
-            }}
-            isInvalid={isEmailInvalid}
-            errorMessage={'Email некорректный'}
-          />
-          <h2 className={s.heading}>Причины обращения</h2>
-          {/* TEXTAREA */}
-          <div className={s.textareaBox}>
-            {isCommentInvalid && <div className={s.errorMsg}>Введите комментарий</div>}
-            <textarea
-              className={classNames(s.textarea, { [s.inputError]: isCommentInvalid })}
-              type='text'
-              rows={5}
-              value={comment}
-              placeholder='Комментарий..'
+        <div className={s.container}>
+          <h1 className={s.title}>Напишите нам</h1>
+          <form className={s.form} onSubmit={onSubmit}>
+
+            {/* Input name */}
+            <Input
+              value={name}
+              placeholder={'Введите имя'}
               onChange={(event) => {
-                setComment(event.target.value);
-                setIsCommentInvalid(false);
+                setIsNameInvalid(false);
+                setName(event.target.value);
               }}
+              isInvalid={isNameInvalid}
+              errorMessage={'Имя не введено'}
             />
-          </div>
-          {/* Radio */}
-          <div className={s.radioBox}>
-            {isKindInvalid && <div className={s.errorMsg}>Выберите один из вариантов</div>}
-            <div className={s.radioOfferBox} tabIndex='0'>
-              <label className={s.radioLabel}>
+
+            {/* Input email */}
+            <Input
+              value={email}
+              placeholder={'Введите email'}
+              onChange={(event) => {
+                setIsEmailInvalid(false);
+                setEmail(event.target.value);
+              }}
+              isInvalid={isEmailInvalid}
+              errorMessage={'Email некорректный'}
+            />
+            <h2 className={s.heading}>Причины обращения</h2>
+
+            {/* Textarea */}
+            <div className={s.textareaBox}>
+              {isCommentInvalid && <div className={s.errorMsg}>Введите комментарий</div>}
+              <textarea
+                className={classNames(s.textarea, { [s.inputError]: isCommentInvalid })}
+                type='text'
+                rows={5}
+                value={comment}
+                placeholder='Комментарий..'
+                onChange={(event) => {
+                  setComment(event.target.value);
+                  setIsCommentInvalid(false);
+                }}
+              />
+            </div>
+
+            {/* Radio */}
+            <div className={s.radioBox}>
+              {isKindInvalid && <div className={s.errorMsgRadio}>Выберите один из вариантов</div>}
+              <div className={s.radioOfferBox} tabIndex='0'>
+                <label className={s.radioLabel}>
+                  <input
+                    className={s.radioInput}
+                    id='radio-offer'
+                    name='kindOfComment'
+                    type='radio'
+                    value='offer'
+                    onChange={(event) => {
+                      setKindOfComment(event.target.value);
+                      setIsKindInvalid(false);
+                    }}
+                  />
+                  <span className={s.radioBefore}></span>
+                  <span className={s.radioText}>Предложение по улучшению качества</span>
+                </label>
+              </div>
+
+              <div className={s.radioPretensionBox} tabIndex='0'>
+                <label className={s.radioLabel}>
+                  <input
+                    className={s.radioInput}
+                    id='radio-pretension'
+                    name='kindOfComment'
+                    type='radio'
+                    value='pretension'
+                    onChange={(event) => {
+                      setKindOfComment(event.target.value);
+                      setIsKindInvalid(false);
+                    }}
+                  />
+                  <span className={s.radioBefore}></span>
+                  <span className={s.radioText}>Претензия</span>
+                </label>
+              </div>
+            </div>
+
+            {/* File */}
+            <div className={s.inputFileBox} tabIndex='0'>
+              {isFileInvalid && <div className={s.errorMsgFile}>Загрузите файл</div>}
+              <label htmlFor='file' className={s.inputFileLabel}>
                 <input
-                  className={s.radioInput}
-                  id='radio-offer'
-                  name='kindOfComment'
-                  type='radio'
-                  value='offer'
+                  multiple
+                  accept='image/png, image/jpeg'
+                  type='file'
+                  name='file'
+                  id='file'
+                  className={s.inputFile}
+                  value={file}
                   onChange={(event) => {
-                    setKindOfComment(event.target.value);
-                    setIsKindInvalid(false);
+                    setFile(event.target.value);
+                    console.log(event.target.value);
+                    setIsFileInvalid(false);
                   }}
                 />
-                <span className={s.radioBefore}></span>
-                <span className={s.radioText}>Предложение по улучшению качества</span>
+                <span className={s.inputFileSpan}></span>
+                <span className={s.inputFileSpan2}></span>
+                <span className={s.inputFileSpan3}>Загрузить файл</span>
               </label>
             </div>
 
-            <div className={s.radioPretensionBox} tabIndex='0'>
-              <label className={s.radioLabel}>
+            {/*  Checkbox */}
+            <div className={s.checkboxBox} tabIndex='0'>
+              {isAgreementInvalid && (
+                <div className={s.errorMsgCheckbox}>Согласитесь на получение обновлений</div>
+              )}
+              <label className={s.checkboxLabel}>
                 <input
-                  className={s.radioInput}
-                  id='radio-pretension'
-                  name='kindOfComment'
-                  type='radio'
-                  value='pretension'
+                  className={s.checkboxInput}
+                  id='checkbox'
+                  name='checkbox'
+                  type='checkbox'
+                  checked={agreement}
                   onChange={(event) => {
-                    setKindOfComment(event.target.value);
-                    setIsKindInvalid(false);
+                    setAgreement(event.target.checked);
+                    setIsAgreementInvalid(false);
                   }}
                 />
-                <span className={s.radioBefore}></span>
-                <span className={s.radioText}>Претензия</span>
+                <span className={s.checkboxFake}></span>
+                <span className={s.checkboxText}>Я согласен получать обновления на почту</span>
               </label>
             </div>
-          </div>
-          {/* FILE */}
-          <div className={s.inputFileBox} tabIndex='0'>
-            {isFileInvalid && <div className={s.errorMsg}>Загрузите файл</div>}
-            <label htmlFor='file' className={s.inputFileLabel}>
-              <input
-                multiple
-                accept="image/png, image/jpeg"
-                type='file'
-                name='file'
-                id='file'
-                className={s.inputFile}
-                value={file}
-                onChange={(event) => {
-                  setFile(event.target.value);
-                  console.log(event.target.value)
-                  setIsFileInvalid(false);
-                }}
-              />
-              <span className={s.inputFileSpan}></span>
-              <span className={s.inputFileSpan2}></span>
-              <span className={s.inputFileSpan3}>Загрузить файл</span>
-            </label>
-          </div>
-          {/*  CHECKBOX */}
-          <div className={s.checkboxBox}  tabIndex='0'>
-            {isAgreementInvalid && (
-              <div className={s.errorMsg}>Согласитесь на получение обновлений</div>
-            )}
-            <label className={s.checkboxLabel}>
-              <input
-                className={s.checkboxInput}
-                id='checkbox'
-                name='checkbox'
-                type='checkbox'
-                checked={agreement}
-                onChange={(event) => {
-                  setAgreement(event.target.checked);
-                  setIsAgreementInvalid(false);
-                }}
-              />
-              <span className={s.checkboxFake}></span>
-              <span className={s.checkboxText}>Я согласен получать обновления на почту</span>
-            </label>
-          </div>
-          {/* BUTTON SUBMIT SEND */}
-          <button className={s.button} id='form-button' type={'submit'} tabIndex='0'>
-            Отправить
-          </button>
-        </form>
+
+            {/* Button submit */}
+            <button className={s.button} id='form-button' type={'submit'} tabIndex='0'>
+              Отправить
+            </button>
+          </form>
+        </div>
       </div>
     </MainLayout>
   );

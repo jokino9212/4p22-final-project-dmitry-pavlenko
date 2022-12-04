@@ -2,24 +2,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+  max-width: 360px;
+}
+
+.container {
+  width: 100%;
 }
 
 .form {
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
+  width: 360px;
 }
 
 .title {
+  width: 100%;
   margin-bottom: 20px;
   font-size: 32px;
 }
 
 .heading {
+  width: 100%;
   margin-bottom: 5px;
 }
 
 .textareaBox {
+  width: 100%;
   position: relative;
 }
 
@@ -46,6 +56,7 @@
 }
 
 .inputFileBox {
+  width: 100%;
   margin-bottom: 25px;
   position: relative;
 }
@@ -93,24 +104,28 @@
   position: absolute;
   bottom: 0;
   left: 110%;
-  width: 150px;
+  width: 130px;
 }
 
 .radioBox {
+  width: 100%;
   position: relative;
   margin-bottom: 25px;
 }
 
 .radioOfferBox {
+  width: 100%;
   margin-bottom: 10px;
 }
 
 .checkboxBox {
+  width: 100%;
   margin-bottom: 25px;
   position: relative;
 }
 
 .checkboxLabel {
+  width: 100%;
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -146,26 +161,57 @@
 }
 
 .checkboxText {
+  width: 100%;
   display: inline-block;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .errorMsg {
+  width: 100%;
   position: absolute;
   top: -20px;
-  right: 0;
+  right: -180px;
+  color: red;
+  pointer-events: none;
+}
+
+.errorMsgRadio {
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  right: -120px;
+  color: red;
+  pointer-events: none;
+}
+
+.errorMsgFile {
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  right: -225px;
+  color: red;
+  pointer-events: none;
+}
+
+.errorMsgCheckbox {
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  right: -45px;
   color: red;
   pointer-events: none;
 }
 
 .inputError {
+  width: 100%;
   border: 2px solid red;
 }
 
 .button {
-  padding: 16px 135px;
+  width: 100%;
+  padding: 5px 10px;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -181,4 +227,87 @@
 }
 .button:focus {
   box-shadow: 0px 0px 30px #4FD81F;
+}
+
+@media screen and (max-width: 1440px) {
+  .root {
+    width: 350px;
+  }
+  .form {
+    width: 350px;
+  }
+  .checkboxFake {
+    margin-right: 0.6944444444vw;
+    width: 1.0416666667vw;
+    height: 1.0416666667vw;
+  }
+  .checkboxFake::before {
+    width: 0.4166666667vw;
+    height: 0.4166666667vw;
+  }
+  .errorMsg {
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    right: -170px;
+    color: red;
+    pointer-events: none;
+  }
+  .errorMsgRadio {
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    right: -115px;
+    color: red;
+    pointer-events: none;
+  }
+  .errorMsgFile {
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    right: -215px;
+    color: red;
+    pointer-events: none;
+  }
+  .errorMsgCheckbox {
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    right: -28px;
+    color: red;
+    pointer-events: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .checkboxFake {
+    margin-right: 0.9765625vw;
+    width: 1.46484375vw;
+    height: 1.46484375vw;
+  }
+  .checkboxFake::before {
+    width: 0.5859375vw;
+    height: 0.5859375vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .checkboxFake {
+    margin-right: 1.3020833333vw;
+    width: 2.6041666667vw;
+    height: 2.6041666667vw;
+  }
+  .checkboxFake::before {
+    width: 0.78125vw;
+    height: 0.78125vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .checkboxFake {
+    margin-right: 2vw;
+    width: 6vw;
+    height: 6vw;
+  }
+  .checkboxFake::before {
+    width: 2.4vw;
+    height: 2.4vw;
+  }
 }/*# sourceMappingURL=Support.module.css.map */

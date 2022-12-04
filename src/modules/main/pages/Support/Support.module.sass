@@ -2,21 +2,31 @@
     display: flex
     flex-direction: column
     align-items: center
+    margin: 0 auto
+    max-width: 360px
+
+.container
+    width: 100%
 
 .form
     margin-bottom: 50px
     display: flex
     flex-direction: column
+    width: 360px
 
 .title
+    width: 100%
     margin-bottom: 20px
     font-size: 32px
 
 .heading
+    width: 100%
     margin-bottom: 5px
 
 .textareaBox
+    width: 100%
     position: relative
+
 .textarea
     width: 100%
     margin-bottom: 25px
@@ -29,11 +39,13 @@
         box-shadow: 4px 2px 2px#D2FBBC
 
 .inputFileBox
+    width: 100%
     margin-bottom: 25px
     position: relative
 
 .inputFile[type=file]
     display: none
+
 .inputFileLabel
     position: relative
     width: 60px
@@ -70,39 +82,24 @@
     position: absolute
     bottom: 0
     left: 110%
-    width: 150px
-
-// .inputFile
-
-//     width: 100%
-//     padding: 16px 135px
-//     font-size: 18px
-//     font-weight: 400
-//     line-height: 21px
-//     border-radius: 10px
-//     background-color: #7AC751
-//     color: white
-//     border: none
-//     outline: none
-//     cursor: pointer
-//     &:hover
-//         box-shadow: 0px 0px 30px #4FD81F
-//     &::placeholder
-//         color: green
-//         background-color: #7AC751
+    width: 130px
 
 .radioBox
+    width: 100%
     position: relative
     margin-bottom: 25px
 
 .radioOfferBox
+    width: 100%
     margin-bottom: 10px
 
 .checkboxBox
+    width: 100%
     margin-bottom: 25px
     position: relative
 
 .checkboxLabel
+    width: 100%
     display: flex
     cursor: pointer
     align-items: center
@@ -120,7 +117,6 @@
     width: calc(24 / 1920 * 100vw)
     height: calc(24 / 1920 * 100vw)
     border: 2px solid #787878
-
     &::before
         content: ' '
         position: absolute
@@ -135,24 +131,51 @@
         transition: 0.2s
 
 .checkboxText
+    width: 100%
     display: inline-block
     font-weight: 400
-    font-size: 16px
-    line-height: 16px
+    font-size: 14px
+    line-height: 14px
 
 .errorMsg
+    width: 100%
     position: absolute
     top: -20px
-    right: 0
+    right: -180px
+    color: red
+    pointer-events: none
+
+.errorMsgRadio
+    width: 100%
+    position: absolute
+    top: -20px
+    right: -120px
+    color: red
+    pointer-events: none
+
+.errorMsgFile
+    width: 100%
+    position: absolute
+    top: -20px
+    right: -225px
+    color: red
+    pointer-events: none
+
+.errorMsgCheckbox
+    width: 100%
+    position: absolute
+    top: -20px
+    right: -45px
     color: red
     pointer-events: none
 
 .inputError
-
+    width: 100%
     border: 2px solid red
 
 .button
-    padding: 16px 135px
+    width: 100%
+    padding: 5px 10px
     font-size: 18px
     font-weight: 400
     line-height: 21px
@@ -166,3 +189,78 @@
         box-shadow: 0px 0px 30px #4FD81F
     &:focus
         box-shadow: 0px 0px 30px #4FD81F
+
+// Media
+@media screen and (max-width: 1440px)
+    .root
+        width: 350px
+
+    .form
+        width: 350px
+
+    .checkboxFake
+        margin-right: calc(10 / 1440 * 100vw)
+        width: calc(15 / 1440 * 100vw)
+        height: calc(15 / 1440 * 100vw)
+        &::before
+            width: calc(6 / 1440 * 100vw)
+            height: calc(6 / 1440 * 100vw)
+
+    .errorMsg
+        width: 100%
+        position: absolute
+        top: -20px
+        right: -170px
+        color: red
+        pointer-events: none
+
+    .errorMsgRadio
+        width: 100%
+        position: absolute
+        top: -20px
+        right: -115px
+        color: red
+        pointer-events: none
+
+    .errorMsgFile
+        width: 100%
+        position: absolute
+        top: -20px
+        right: -215px
+        color: red
+        pointer-events: none
+
+    .errorMsgCheckbox
+        width: 100%
+        position: absolute
+        top: -20px
+        right: -28px
+        color: red
+        pointer-events: none
+        
+@media screen and (max-width: 1024px)
+    .checkboxFake
+        margin-right: calc(10 / 1024 * 100vw)
+        width: calc(15 / 1024 * 100vw)
+        height: calc(15 / 1024 * 100vw)
+        &::before
+            width: calc(6 / 1024 * 100vw)
+            height: calc(6 / 1024 * 100vw)
+
+@media screen and (max-width: 768px)
+    .checkboxFake
+        margin-right: calc(10 / 768 * 100vw)
+        width: calc(20 / 768 * 100vw)
+        height: calc(20 / 768 * 100vw)
+        &::before
+            width: calc(6 / 768 * 100vw)
+            height: calc(6 / 768 * 100vw)
+
+@media screen and (max-width: 500px)
+    .checkboxFake
+        margin-right: calc(10 / 500 * 100vw)
+        width: calc(30 / 500 * 100vw)
+        height: calc(30 / 500 * 100vw)
+        &::before
+            width: calc(12 / 500 * 100vw)
+            height: calc(12 / 500 * 100vw)

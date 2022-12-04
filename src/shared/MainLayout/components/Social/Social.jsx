@@ -1,9 +1,9 @@
 import React from 'react';
 import './Social.sass';
 
-import {OdIcon, VkIcon, PinterestIcon } from 'assets/icons/'
+import { OdIcon, VkIcon, PinterestIcon } from 'assets/icons/';
 
- const  Social = function() {
+const Social = function () {
   return (
     <div className='social'>
       <ul className='social__list'>
@@ -25,6 +25,6 @@ import {OdIcon, VkIcon, PinterestIcon } from 'assets/icons/'
       </ul>
     </div>
   );
-}
+};
 
-export default Social
+export default Social;

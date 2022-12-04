@@ -1,5 +1,5 @@
 .root
-    width: 270px
+    width: calc(380 / 1920 * 100vw)
     position: relative
     border: 0px solid #7AC751
     border-radius: 10px
@@ -7,9 +7,22 @@
     flex-direction: column
     align-items: center
     cursor: pointer
+    column-gap: 20px
+    overflow: hidden
+    transition: all 1s ease
+    
+    &:hover
+        transform: translateY(-4px)
+        box-shadow: 0 0 25px #313131
+        
+    &:active
+        transition: all 0.3s ease
+        transform: translateY(-4px)
+        border: 2px solid #7AC751
+ 
 .image
     width: 270px
-    height: 287px   
+    height: 287px
     margin-bottom: 15px
     object-fit: cover
     width: 100%
@@ -30,8 +43,7 @@
     display: flex
     flex-direction: row
 .price
-   
-    
+
     font-size: 18px
     line-height: 22px
     font-weight: 800
@@ -40,9 +52,56 @@
         // content: '₽'
         content: ' $'
 
-.icon       
-    position: absolute 
+.icon
+    position: absolute
+    width: 40px
+    height: 40px
     display: block
-    top: 50%
-    right: 0
-    
+    top: 60%
+    right: 10%
+    overflow: hidden
+    border-radius: 50%
+    background-color: white
+    &:hover
+        transform: translateY(-5px)
+        box-shadow: 0 0 15px white
+    &:active
+        transition: all 0.1s ease
+        transform: translateY(-12px)
+        background-color: black
+    &::after
+        position: absolute
+        content: ''
+        width: 30px
+        height: 30px
+        top: 50%
+        right: 0
+        transform: translate(0, 60px)
+        border-radius: 50%
+        transition: all 0.3s ease
+        background-color: white
+      
+          
+
+// Media    
+@media screen and (max-width: 1720px)
+
+@media screen and (max-width: 1540px)
+    .root
+        width: 31%
+@media screen and (max-width: 1170px)
+    .root
+        column-gap: 5px
+        width: 30%
+@media screen and (max-width: 900px)
+    .root
+        width: calc(380 / 900 * 100vw)
+        
+       
+@media screen and (max-width: 480px)
+    .root
+        width: 100%
+        padding-left: 5px
+        padding-right: 5px
+        flex-direction: column
+        row-gap: 0px

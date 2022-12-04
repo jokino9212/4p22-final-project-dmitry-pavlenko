@@ -1,18 +1,25 @@
+.root {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .container {
+  margin: 0 auto;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
 }
 
 .return {
+  margin-bottom: 5px;
   padding: 5px 15px;
   background-color: #7AC751;
   border: none;
   outline: none;
   color: white;
   cursor: pointer;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 .return:hover {
   box-shadow: 0px 0px 30px #4FD81F;
@@ -20,31 +27,32 @@
 
 .left {
   flex-basis: 40%;
-  width: 150%;
 }
 
 .image {
   width: 100%;
-  max-height: 425px;
 }
 
 .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex-basis: 60%;
   padding-left: 115px;
 }
 
 .title {
   margin-bottom: 10px;
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 38px;
 }
 
 .description {
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 19px;
+  line-height: 30px;
 }
 .description::after {
   content: "A classic rectangular desk does not take up much space and is suitable for a small room or office.It is equipped with two spacious drawers, above which there is an open niche for storing paper and other accessories.The main advantage of the product is a large work surface, where it is convenient to spread out papers, put a laptop or monitor and work comfortably.The Lyon table is made of high-quality chipboard.This material is characterized by durability and strength, so the piece of furniture will retain its functionality and attractiveness for many years.";
@@ -79,8 +87,8 @@
 
 .button {
   width: 100%;
-  padding: 15px 170px 15px 170px;
-  font-size: 30px;
+  padding: 20px 170px 20px 170px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 36px;
   background-color: #7AC751;
@@ -92,4 +100,84 @@
 }
 .button:hover {
   box-shadow: 0px 0px 30px #4FD81F;
+}
+.button:active {
+  background-color: #0C9800;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1440px) {
+  .left {
+    flex-basis: 50%;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+  .title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .description {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .right {
+    flex-basis: 60%;
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .left {
+    flex-basis: 70%;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+  .title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .description {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .right {
+    flex-basis: 30%;
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .image {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  .right {
+    align-items: center;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 26px;
+  }
+  .description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .button {
+    padding: 20px 17px 20px 17px;
+  }
+  .priceAmount {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=Product.module.css.map */

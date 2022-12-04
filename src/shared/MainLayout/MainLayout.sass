@@ -1,15 +1,16 @@
 .outter
     margin: 0 auto
     max-width: 1920px
+
 .inner
     margin: 0 auto
     max-width: calc(1770 / 1920 * 100vw)
+
 .header
     margin-bottom: 50px
+
     &__outter
         padding: 0 0px
-
-    &__inner
 
     &__top
         display: flex
@@ -17,7 +18,7 @@
         align-items: center
         padding: 15px calc(75 / 1920 * 100vw)
         background-color: #7AC751
-    &__top-welcome
+
     &__top-welcome-text
         font-size: 16px
         line-height: 18.96px
@@ -27,18 +28,20 @@
         &:before
             content: "\260e"
             margin-right: 0.5em
+
         &:focus
             color: white
+
         &:hover
             color: white
+
     &__social
         margin-right: 70px
-    &__signup
 
+    &__signup
         display: flex
         font-size: 16px
         line-height: 18.96px
-        &:hover
 
     &__signup-link
         border: none
@@ -83,7 +86,6 @@
         color: #555555
         &:hover
             color: #4FD81F
-
             text-shadow: 0px 0px 30px #4FD81F
 
 .content
@@ -97,10 +99,12 @@
         display: flex
         flex-direction: row
         justify-content: space-between
+
     &__top-col-1
         display: flex
         flex-direction: column
         flex: 0 1 20%
+
     &__logo
         margin-bottom: 15px
         transform: translateY(-10px)
@@ -111,6 +115,7 @@
     &__nav-item
         &:not(:last-child)
             margin-bottom: 15px
+
     &__nav-link
         border: none
         padding: 0
@@ -119,10 +124,8 @@
         font-weight: 400
         font-size: 18px
         color: #555555
-
         &:hover
             text-shadow: 0px 0px 30px #4FD81F
-
         &--title
             font-weight: 600
 
@@ -130,7 +133,6 @@
 
     &__bottom
         display: flex
-
         padding: 0 calc(75 / 1920 * 100vw)
         padding-top: 30px
         justify-content: space-between
@@ -144,6 +146,7 @@
 
     &__terms-item:not(:last-child)
         margin-right: 10px
+
     &__terms-link
         border: none
         padding: 0
@@ -151,3 +154,64 @@
         cursor: pointer
         &:hover
             text-shadow: 0px 0px 20px#7AC751
+
+// Media    
+@media screen and (max-width: 1050px)
+    .header
+        &__social
+            display: none
+            
+        &__logo-icon
+            max-width: 110px
+
+        &__navbar-item
+            font-size: 20px
+    .footer
+        &__top-col-4
+            display: none
+
+@media screen and (max-width: 768px)
+    .header
+        &__top-welcome-text
+            display: none
+
+        &__phone-box
+            margin-right: auto
+
+        &__logo-icon
+            max-width: 110px
+
+        &__navbar
+            column-gap: 5px
+
+        &__navbar-item
+            font-size: 14px
+
+    .footer
+        &__description
+            width: 240px
+
+        &__nav-link
+            font-size: 22px
+
+        &__top-col-3
+            display: none
+
+        &__terms-link
+            font-size: 10px
+
+@media screen and (max-width: 540px)
+    .footer
+        &__nav-link
+            font-size: 16px
+
+        &__logo-icon
+            width: 100px
+
+        &__description
+            width: 120px
+
+@media screen and (max-width: 440px)
+    .footer
+        &__nav-link
+            font-size: 12px

@@ -29,4 +29,17 @@
 }
 .order:focus {
   box-shadow: 0px 0px 30px #4FD81F;
+}/*# sourceMappingURL=Cart.module.css.map */0px 30px #4FD81F;
+}
+.order:focus {
+  box-shadow: 0px 0px 30px #4FD81F;
+}
+.order:active {
+  background-color: #0C9800;
+}
+
+@media screen and (max-width: 550px) {
+  .root {
+    display: flex;
+  }
 }/*# sourceMappingURL=Cart.module.css.map */

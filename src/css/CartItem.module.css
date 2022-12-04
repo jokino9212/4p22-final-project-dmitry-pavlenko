@@ -71,4 +71,39 @@
 
 .delete:hover {
   box-shadow: 0px 0px 30px #4FD81F;
+}/*# sourceMappingURL=CartItem.module.css.map */: white;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+}
+.delete:hover {
+  box-shadow: 0px 0px 30px #4FD81F;
+}
+.delete:active {
+  background-color: #843838;
+}
+
+@media screen and (max-width: 550px) {
+  .image {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  .title {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .description {
+    margin-bottom: 10px;
+    max-width: 450px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+  .priceAmount {
+    padding-left: 20px;
+    margin-right: 30px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }/*# sourceMappingURL=CartItem.module.css.map */

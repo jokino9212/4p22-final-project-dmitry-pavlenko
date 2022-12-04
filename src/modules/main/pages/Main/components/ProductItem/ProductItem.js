@@ -4,7 +4,7 @@ import { useDispatch, } from 'react-redux'
 
 import { addProductToCart } from 'modules/main/store/slice'
 
-import { ToCartGreenIcon } from 'assets/icons'
+import { CartIcon } from 'assets/icons'
 
 import s from "./ProductItem.module.sass"
 
@@ -31,7 +31,7 @@ const onAddToCart = (event) => {
             <div className={s.title}>{title}</div> 
             <div className={s.purchase}>
             <div className={s.price}>{price}</div>
-            <ToCartGreenIcon onClick={onAddToCart} className={s.icon}/>
+            <CartIcon onClick={onAddToCart} className={s.icon}/>
             </div>
         </div>
 

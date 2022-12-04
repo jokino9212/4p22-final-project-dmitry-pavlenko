@@ -7,6 +7,7 @@
     margin-bottom: 20px
     display: flex
     flex-direction: row
+
 .searchBox
     display: flex
     flex-direction: row
@@ -17,6 +18,7 @@
     border-radius: 8px
     border-bottom-right-radius: 0
     border-top-right-radius: 0
+    color: #555555
     &:hover
         box-shadow: 4px 4px 16px#7AC751
     &:focus
@@ -31,6 +33,7 @@
     border: 2px solid #7AC751
     outline: none
     color: #555555
+    background-color: transparent
     &:hover
         box-shadow: 4px 4px 16px#7AC751
     &:focus
@@ -50,24 +53,55 @@
     &:focus
         box-shadow: 4px 4px 16px#7AC751
         outline: none
+
 .searchBtnReset
     padding: 15px
     border-radius: 8px
     border: 2px solid #7AC751
     cursor: pointer
+    color: #555555
+    background-color: transparent
+    transition: all 0.3s ease
     &:hover
         box-shadow: 4px 4px 16px#7AC751
     &:focus
         outline: none
         box-shadow: 4px 4px 16px#7AC751
+    &:active
+        background-color: #105013
+        color: white
 
 .wrapper
     margin-bottom: 50px
+    width: 100%
     display: flex
     flex-wrap: wrap
     row-gap: 43px
     column-gap: 30px
-    justify-content: space-between
+    justify-content: space-evenly
 
 .stack
     margin-bottom: 25px
+
+// Media    
+@media screen and (max-width: 768px)
+    .searchInput
+        max-width: 150px
+
+    .searchSelect
+        max-width: 100px
+
+    .searchBtnReset
+        max-width: 50px
+        font-size: 12px
+        padding: 0 5px
+
+@media screen and (max-width: 480px)
+    .searchInput
+        max-width: 110px
+        font-size: 12px
+
+    .searchSelect
+        max-width: 51px
+        font-size: 10px
+        padding: 0

@@ -95,8 +95,41 @@
   -moz-column-gap: 30px;
        column-gap: 30px;
   justify-content: space-between;
+}/*# sourceMappingURL=Main.module.css.map */ margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 43px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  justify-content: space-evenly;
 }
 
 .stack {
   margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .searchInput {
+    max-width: 150px;
+  }
+  .searchSelect {
+    max-width: 100px;
+  }
+  .searchBtnReset {
+    max-width: 50px;
+    font-size: 12px;
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .searchInput {
+    max-width: 110px;
+    font-size: 12px;
+  }
+  .searchSelect {
+    max-width: 51px;
+    font-size: 10px;
+    padding: 0;
+  }
 }/*# sourceMappingURL=Main.module.css.map */

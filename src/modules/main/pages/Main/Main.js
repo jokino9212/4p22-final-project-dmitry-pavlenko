@@ -12,6 +12,8 @@ import s from './Main.module.sass';
 import { setIsLoading } from 'modules/main/store/slice';
 import { setProducts } from 'modules/main/store/slice';
 
+
+
 const PRICES = [
     {
         label: 'Цена: от: /до:',
@@ -39,7 +41,7 @@ const Main = () => {
     const [selectedTitles, setSelectedTitles] = useState('0') // Selected <select> value
     const [totalProducts, setTotalProducts] = useState([]) // Dataset for rendering
     const [page, setPage] = useState(0) // Pagination
-    const [pageSize, setPageSize] = useState(8)
+    const [pageSize] = useState(8)
 
     useEffect(() => {
         console.log(page)
@@ -64,7 +66,6 @@ const Main = () => {
         const totalProducts = foundProducts;
         setTotalProducts(getPageProducts(totalProducts, page, pageSize))
     }, [foundProducts, page, pageSize])
-
 
     // -----
 
@@ -122,7 +123,7 @@ const Main = () => {
                 <div className={s.search}>
                     <div className={s.searchBox}>
 
-                        {/* INPUT SEARCH */}
+                        {/* Input search */}
                         <input className={s.searchInput}
                             type='text'
                             placeholder='Поиск..'
@@ -139,7 +140,7 @@ const Main = () => {
                             }}
                         />
 
-                        {/* SELECT */}
+                        {/* Select */}
                         <select className={s.searchSelect}
                             name='select'
                             value={selectedTitles}
@@ -154,7 +155,7 @@ const Main = () => {
                             ))}
                         </select>
 
-                        {/* BUTTON SEARCH */}
+                        {/* Button search*/}
                         <button className={s.searchButton}
                             type={'button'}
                             onClick={onSearch}
@@ -163,7 +164,7 @@ const Main = () => {
                         </button>
                     </div>
 
-                    {/* BUTTON RESET */}
+                    {/* Button reset */}
                     <button className={s.searchBtnReset}
                         onClick={() => {
                             setFoundProducts(products)
@@ -171,11 +172,11 @@ const Main = () => {
                             setSelectedTitles('')
                         }}
                     >
-                        Сбросить фильтры и поиск
+                        Сброс
                     </button>
                 </div>
 
-                {/* PRODUCTS WRAPPER */}
+                {/* Products wrapper */}
                 <div className={s.wrapper}>
                     {!isLoading ?
                         totalProducts.map((product) => (

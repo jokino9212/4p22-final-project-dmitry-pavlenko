@@ -1,4 +1,5 @@
 .root {
+  max-width: 360px;
   position: relative;
   margin-bottom: 10px;
 }
@@ -32,4 +33,16 @@
   right: 0;
   color: red;
   pointer-events: none;
+}
+
+@media screen and (max-width: 500px) {
+  .root {
+    width: 350px;
+  }
+  .inputDefault {
+    width: 350px;
+  }
+  .inputError {
+    width: 350px;
+  }
 }/*# sourceMappingURL=Input.module.css.map */
