@@ -1,16 +1,24 @@
 {
   "files": {
-    "main.css": "/4p22-final-project-dmitry-pavlenko/static/css/main.073c9b0a.css",
-    "main.js": "/4p22-final-project-dmitry-pavlenko/static/js/main.797f00a8.js",
-    "static/js/787.8dc6e91c.chunk.js": "/4p22-final-project-dmitry-pavlenko/static/js/787.8dc6e91c.chunk.js",
-    "static/media/logo.svg": "/4p22-final-project-dmitry-pavlenko/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/4p22-final-project-dmitry-pavlenko/static/css/main.e5249293.css",
+    "main.js": "/4p22-final-project-dmitry-pavlenko/static/js/main.0611264c.js",
+    "static/media/right.png": "/4p22-final-project-dmitry-pavlenko/static/media/right.268d59367954758f2b95.png",
+    "static/media/left.png": "/4p22-final-project-dmitry-pavlenko/static/media/left.6a6da4453b0d930d7a98.png",
+    "static/media/Logo.svg": "/4p22-final-project-dmitry-pavlenko/static/media/Logo.c46a953c4372d9d7333f1e9bd4ef97f6.svg",
+    "static/media/tocartgreen.svg": "/4p22-final-project-dmitry-pavlenko/static/media/tocartgreen.c8dda1feff9e949061bc798f5fa41bfd.svg",
+    "static/media/Shop.svg": "/4p22-final-project-dmitry-pavlenko/static/media/Shop.0df66d1a10a9053176d9a4ff7486f768.svg",
+    "static/media/cart.svg": "/4p22-final-project-dmitry-pavlenko/static/media/cart.38262acee3815f51a12af07b64749f58.svg",
+    "static/media/tocart.svg": "/4p22-final-project-dmitry-pavlenko/static/media/tocart.91f7a6a2501c719dec834a9a20e11f65.svg",
+    "static/media/vk.svg": "/4p22-final-project-dmitry-pavlenko/static/media/vk.69ca816819c7fa3b9e0d490b4c9066a0.svg",
+    "static/media/od.svg": "/4p22-final-project-dmitry-pavlenko/static/media/od.d1890267b86610cd0cdbc489541042d3.svg",
+    "static/media/pinterest.svg": "/4p22-final-project-dmitry-pavlenko/static/media/pinterest.2fa4208944c536f77c18d10c12ec1c76.svg",
     "index.html": "/4p22-final-project-dmitry-pavlenko/index.html",
-    "main.073c9b0a.css.map": "/4p22-final-project-dmitry-pavlenko/static/css/main.073c9b0a.css.map",
-    "main.797f00a8.js.map": "/4p22-final-project-dmitry-pavlenko/static/js/main.797f00a8.js.map",
-    "787.8dc6e91c.chunk.js.map": "/4p22-final-project-dmitry-pavlenko/static/js/787.8dc6e91c.chunk.js.map"
+    "static/media/search.svg": "/4p22-final-project-dmitry-pavlenko/static/media/search.c9cc246886c250049d80a7bb509b99ee.svg",
+    "main.e5249293.css.map": "/4p22-final-project-dmitry-pavlenko/static/css/main.e5249293.css.map",
+    "main.0611264c.js.map": "/4p22-final-project-dmitry-pavlenko/static/js/main.0611264c.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.797f00a8.js"
+    "static/css/main.e5249293.css",
+    "static/js/main.0611264c.js"
   ]
 }
