@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/4p22-final-project-dmitry-pavlenko/static/css/main.e5249293.css",
-    "main.js": "/4p22-final-project-dmitry-pavlenko/static/js/main.0611264c.js",
+    "main.css": "/4p22-final-project-dmitry-pavlenko/static/css/main.6c0864e2.css",
+    "main.js": "/4p22-final-project-dmitry-pavlenko/static/js/main.c6fc4b0b.js",
     "static/media/right.png": "/4p22-final-project-dmitry-pavlenko/static/media/right.268d59367954758f2b95.png",
     "static/media/left.png": "/4p22-final-project-dmitry-pavlenko/static/media/left.6a6da4453b0d930d7a98.png",
     "static/media/Logo.svg": "/4p22-final-project-dmitry-pavlenko/static/media/Logo.c46a953c4372d9d7333f1e9bd4ef97f6.svg",
@@ -14,11 +14,11 @@
     "static/media/pinterest.svg": "/4p22-final-project-dmitry-pavlenko/static/media/pinterest.2fa4208944c536f77c18d10c12ec1c76.svg",
     "index.html": "/4p22-final-project-dmitry-pavlenko/index.html",
     "static/media/search.svg": "/4p22-final-project-dmitry-pavlenko/static/media/search.c9cc246886c250049d80a7bb509b99ee.svg",
-    "main.e5249293.css.map": "/4p22-final-project-dmitry-pavlenko/static/css/main.e5249293.css.map",
-    "main.0611264c.js.map": "/4p22-final-project-dmitry-pavlenko/static/js/main.0611264c.js.map"
+    "main.6c0864e2.css.map": "/4p22-final-project-dmitry-pavlenko/static/css/main.6c0864e2.css.map",
+    "main.c6fc4b0b.js.map": "/4p22-final-project-dmitry-pavlenko/static/js/main.c6fc4b0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5249293.css",
-    "static/js/main.0611264c.js"
+    "static/css/main.6c0864e2.css",
+    "static/js/main.c6fc4b0b.js"
   ]
 }
