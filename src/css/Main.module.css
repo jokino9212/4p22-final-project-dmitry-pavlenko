@@ -21,6 +21,7 @@
   border-radius: 8px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+  color: #555555;
 }
 .searchInput:hover {
   box-shadow: 4px 4px 16px #7AC751;
@@ -30,10 +31,6 @@
   box-shadow: 4px 4px 16px #7AC751;
 }
 .searchInput::-moz-placeholder {
-  padding-left: 15px;
-  color: green;
-}
-.searchInput:-ms-input-placeholder {
   padding-left: 15px;
   color: green;
 }
@@ -47,6 +44,7 @@
   border: 2px solid #7AC751;
   outline: none;
   color: #555555;
+  background-color: transparent;
 }
 .searchSelect:hover {
   box-shadow: 4px 4px 16px #7AC751;
@@ -78,6 +76,9 @@
   border-radius: 8px;
   border: 2px solid #7AC751;
   cursor: pointer;
+  color: #555555;
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
 .searchBtnReset:hover {
   box-shadow: 4px 4px 16px #7AC751;
@@ -86,16 +87,13 @@
   outline: none;
   box-shadow: 4px 4px 16px #7AC751;
 }
+.searchBtnReset:active {
+  background-color: #105013;
+  color: white;
+}
 
 .wrapper {
   margin-bottom: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 43px;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-  justify-content: space-between;
-}/*# sourceMappingURL=Main.module.css.map */ margin-bottom: 50px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

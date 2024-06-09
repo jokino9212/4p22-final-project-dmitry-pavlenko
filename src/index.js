@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { store } from 'store/index';
+import { store } from './store';
 import { Main, Product, Cart, Support } from './modules/main/pages'
 import { Login, Registration } from './modules/account/pages';
 import { ErrorBoundary, Page404 } from './shared';
@@ -34,3 +34,4 @@ root.render(
     </Provider>
 
 );
+

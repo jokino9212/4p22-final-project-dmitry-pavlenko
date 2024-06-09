@@ -12,9 +12,6 @@
 .inputDefault::-moz-placeholder {
   padding-left: 10px;
 }
-.inputDefault:-ms-input-placeholder {
-  padding-left: 10px;
-}
 .inputDefault::placeholder {
   padding-left: 10px;
 }

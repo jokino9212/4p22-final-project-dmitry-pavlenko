@@ -1,3 +1,9 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .special {
   display: flex;
   justify-content: space-between;
@@ -15,7 +21,7 @@
   padding: 28px 375px 28px 24px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url(/assets/images/left.png);
+  background-image: url("/assets/images/left.png");
 }
 .special__boxRight {
   display: flex;
@@ -23,10 +29,10 @@
   width: 100%;
   flex-direction: column;
   border: 1px solid black;
-  padding: 28px 515px 28px 24px;
+  padding: 28px 275px 28px 24px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url(/assets/images/right.png);
+  background-image: url("/assets/images/right.png");
 }
 .special__title {
   display: block;
@@ -57,8 +63,6 @@
   font-size: 18px;
   line-height: 21.5px;
   text-decoration: line-through;
-  color: #CCCCCC;
-}/*# sourceMappingURL=Special.module.css.map */: line-through;
   color: #CCCCCC;
 }
 
